@@ -2,10 +2,10 @@ services:
   app:
     build:
       context: .
-    container_name: js_fastify_blog_app
+      dockerfile: Dockerfile
+    image: samkapandbl2/devops-for-programmers-project-74:latest
+    container_name: devops-for-progs
     working_dir: /app
-    volumes:
-      - ./app:/app
     ports:
       - "8080:8080"
     command: make test
