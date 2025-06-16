@@ -10,11 +10,13 @@ jobs:
 
       - name: Run tests
         run: make ci
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           file: Dockerfile.production
