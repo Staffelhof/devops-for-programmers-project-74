@@ -4,5 +4,4 @@ services:
       context: .
       dockerfile: Dockerfile.production
     image: samkapandbl2/devops-for-programmers-project-74:latest
-    container_name: devops-for-progs
     command: make test
