@@ -5,7 +5,6 @@ services:
       dockerfile: Dockerfile.production
     image: samkapandbl2/devops-for-programmers-project-74:latest
     container_name: devops-for-progs
-    working_dir: /app
     ports:
       - "8080:8080"
     command: make test
