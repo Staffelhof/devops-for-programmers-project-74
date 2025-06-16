@@ -2,7 +2,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production
     image: samkapandbl2/devops-for-programmers-project-74:latest
     container_name: devops-for-progs
     working_dir: /app

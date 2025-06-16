@@ -3,6 +3,6 @@ services:
     command: make dev
     build:
       context: .
-      dockerfile: Dockerfile.production
+      dockerfile: Dockerfile
     volumes:
       - ./app:/app
