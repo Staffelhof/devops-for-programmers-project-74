@@ -8,9 +8,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3.1
-
       - name: Run tests
         run: make ci
 
@@ -21,4 +18,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           file: Dockerfile.production
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devops-for-programmers-project-74:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/devops-for-programmers-project-74:latest
